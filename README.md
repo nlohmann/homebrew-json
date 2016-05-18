@@ -1,41 +1,30 @@
+# JSON for Modern C++ (Homebrew formula)
+
+[![asciicast](https://asciinema.org/a/0ewqttgassj17lr8f2gxi055d.png)](https://asciinema.org/a/0ewqttgassj17lr8f2gxi055d)
+
 [![Build Status](https://travis-ci.org/nlohmann/homebrew-json.svg?branch=master)](https://travis-ci.org/nlohmann/homebrew-json)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nlohmann/homebrew-json/master/LICENSE.MIT)
 
-# Setup
+This [Homebrew](http://brew.sh) formula installs the header-only [JSON for Modern C++](https://github.com/nlohmann/json) library to your system.
 
-```
-brew tap nlohmann/json
-```
+TL;DR: Just execute `brew tap nlohmann/json` and `brew install nlohmann_json`.
 
-# Install
+## Usage
 
-```
-brew install nlohmann_json
-```
+To use the JSON library, add
 
-To install the bleeding-edge version:
-
-```
-brew install nlohmann_json --HEAD
+```cpp
+#include <json.hpp>
 ```
 
-# Usage
-
-To use the installed JSON library, add the following string to your compiler call:
+to your code and add
 
 ```
 -I/usr/local/homebrew/Cellar/nlohmann_json/1.1.0/include
 ```
 
-Ff you installed the HEAD version, use the following:
+to your compiler flags.
 
-```
--I/usr/local/homebrew/Cellar/nlohmann_json/HEAD/include
-```
+## Tests
 
-# Test
-
-```
-brew test nlohmann_json
-```
-
-The formula needs to be installed before it can be tested.
+With `brew test nlohmann_json` you can check if the formula is working properly. Note the formula needs to be installed before it can be tested.
