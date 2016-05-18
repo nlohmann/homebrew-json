@@ -1,7 +1,5 @@
 # JSON for Modern C++ (Homebrew formula)
 
-[![asciicast](https://asciinema.org/a/0ewqttgassj17lr8f2gxi055d.png)](https://asciinema.org/a/0ewqttgassj17lr8f2gxi055d)
-
 [![Build Status](https://travis-ci.org/nlohmann/homebrew-json.svg?branch=master)](https://travis-ci.org/nlohmann/homebrew-json)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nlohmann/homebrew-json/master/LICENSE.MIT)
 
