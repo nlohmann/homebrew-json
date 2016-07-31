@@ -3,7 +3,7 @@ class NlohmannJson < Formula
   homepage "https://github.com/nlohmann/json"
   url "https://github.com/nlohmann/json/archive/v2.0.2.tar.gz"
   sha256 "62d99d8b66a314ed02a58a3e50ed180056e8f858044d8b873cf75456328e6f8d"
-  head "https://github.com/nlohmann/json.git"
+  head "https://github.com/nlohmann/json.git", :branch => "develop"
 
   def install
     include.install "src/json.hpp"
