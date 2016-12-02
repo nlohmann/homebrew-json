@@ -1,8 +1,8 @@
 class NlohmannJson < Formula
   desc "JSON for Modern C++"
   homepage "https://github.com/nlohmann/json"
-  url "https://github.com/nlohmann/json/archive/v2.0.7.tar.gz"
-  sha256 "211c57c91e7ed40fc8686d76bd2eb4c76d3e6d496a6b8080a8a987781d461e70"
+  url "https://github.com/nlohmann/json/archive/v2.0.8.tar.gz"
+  sha256 "eaf12b411ab2b9cd196a502212f7e0985f77ed47de22377a138326216e1960bb"
   head "https://github.com/nlohmann/json.git", :branch => "develop"
 
   def install
