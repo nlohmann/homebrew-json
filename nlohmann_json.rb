@@ -6,13 +6,13 @@ class NlohmannJson < Formula
   head "https://github.com/nlohmann/json.git", :branch => "develop"
 
   def install
-    include.install "single_include"
+    include.install "single_include/nlohmann"
     ohai "to use the library, please set your include path accordingly:"
     ohai "CPPFLAGS: -I#{include}"
   end
 
   test do
-    (testpath/"test.cpp").write <<-EOS.undent
+    (testpath/"test.cpp").write <<~EOS
       #include <nlohmann/json.hpp>
 
       using nlohmann::json;
