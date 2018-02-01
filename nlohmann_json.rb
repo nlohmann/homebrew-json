@@ -1,19 +1,19 @@
 class NlohmannJson < Formula
   desc "JSON for Modern C++"
   homepage "https://github.com/nlohmann/json"
-  url "https://github.com/nlohmann/json/archive/v3.0.1.tar.gz"
-  sha256 "402464cd6d50c81bb6a683d07c537e5a8c4684fd1186826d3aa1385ce6adac13"
+  url "https://github.com/nlohmann/json/archive/v3.1.0.tar.gz"
+  sha256 "b20be343922f73504baf8a01543c2a42d16e01f18bb231b324a8959416ccf4f8"
   head "https://github.com/nlohmann/json.git", :branch => "develop"
 
   def install
-    include.install "src/json.hpp"
+    include.install "single_include"
     ohai "to use the library, please set your include path accordingly:"
     ohai "CPPFLAGS: -I#{include}"
   end
 
   test do
     (testpath/"test.cpp").write <<-EOS.undent
-      #include <json.hpp>
+      #include <nlohmann/json.hpp>
 
       using nlohmann::json;
 
