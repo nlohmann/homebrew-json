@@ -5,10 +5,26 @@ class NlohmannJson < Formula
   sha256 "c377963a95989270c943d522bfefe7b889ef5ed0e1e15d535fd6f6f16ed70732"
   head "https://github.com/nlohmann/json.git", :branch => "develop"
 
+  depends_on "cmake" => [:optional]
+
   def install
-    include.install "single_include/nlohmann"
-    ohai "to use the library, please set your include path accordingly:"
-    ohai "CPPFLAGS: -I#{include}"
+    if build.with? "cmake"
+      mkdir "build" do
+        system "cmake", "..", "-DJSON_BuildTests=OFF", *std_cmake_args
+        system "make", "install"
+      end
+    else
+      include.install "single_include/nlohmann"
+    end
+  end
+
+  def caveats
+    <<~EOS
+      If built with CMake support, you can use find_package to use the library.
+
+      Without it, please set your include path accordingly:
+      CPPFLAGS: -I#{include}
+    EOS
   end
 
   test do
