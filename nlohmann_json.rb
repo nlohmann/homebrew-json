@@ -1,8 +1,8 @@
 class NlohmannJson < Formula
   desc "JSON for Modern C++"
   homepage "https://github.com/nlohmann/json"
-  url "https://github.com/nlohmann/json/archive/v3.6.0.tar.gz"
-  sha256 "df73b31406aea5c081dcc564bea665a30ec122d77551032d43a4a70275cca586"
+  url "https://github.com/nlohmann/json/archive/v3.6.1.tar.gz"
+  sha256 "80c45b090e40bf3d7a7f2a6e9f36206d3ff710acfa8d8cc1f8c763bb3075e22e"
   head "https://github.com/nlohmann/json.git", :branch => "develop"
 
   depends_on "cmake" => [:optional]
