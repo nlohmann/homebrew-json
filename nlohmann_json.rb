@@ -7,6 +7,8 @@ class NlohmannJson < Formula
 
   depends_on "cmake" => [:optional]
 
+  deprecate! date: "2021-08-19", because: "formula is now part of core; use 'nlohmann-json'"
+
   def install
     if build.with? "cmake"
       mkdir "build" do

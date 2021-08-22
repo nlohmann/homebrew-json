@@ -1,5 +1,19 @@
 # JSON for Modern C++ (Homebrew formula)
 
+## Deprecation Notice
+
+This formula is now deprecated as [nlohmann-json](https://formulae.brew.sh/formula/nlohmann-json) is now part of Homebrew Core. Use `brew install nlohmann-json` to install.
+
+If you have used this repository's formula before, use
+
+```sh
+brew uninstall nlohmann_json
+brew untap nlohmann/json
+brew install nlohmann-json
+```
+
+### Archived README
+
 [![Build Status](https://travis-ci.org/nlohmann/homebrew-json.svg?branch=master)](https://travis-ci.org/nlohmann/homebrew-json)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nlohmann/homebrew-json/master/LICENSE.MIT)
 
@@ -7,7 +21,7 @@ This [Homebrew](http://brew.sh) formula installs the header-only [JSON for Moder
 
 TL;DR: Just execute `brew tap nlohmann/json` and `brew install nlohmann_json`.
 
-## Usage
+### Usage
 
 To use the JSON library, add
 
@@ -23,11 +37,11 @@ to your code and add
 
 to your compiler flags.
 
-## Tests
+### Tests
 
 With `brew test nlohmann_json` you can check if the formula is working properly. Note the formula needs to be installed before it can be tested.
 
-## Update formula
+### Update formula
 
 ```sh
 export VERSION=3.7.2
